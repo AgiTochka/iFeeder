@@ -1,0 +1,79 @@
+.conteiner{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.header{
+    width: 100vw;
+    height: 80px;
+    padding: 12px;
+    color: white;
+}
+
+
+
+.h1{
+    font-family: 'Plein', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    z-index: 2;
+}
+.mainText{
+    color: white;
+    font-family: 'Switzer', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 120px;
+    z-index: 1;
+    width: 40%;
+    margin:auto;
+    padding-top: 10vh ;
+}
+.headerMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    font-family: 'Plein', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    z-index: 2;
+}
+.artBlock{
+    width:100vw;
+    height: 80vh;
+    background: linear-gradient(80.7deg, #DDA5FF 0%, #FFBCBC 53.29%, #FFC73B 102.74% );
+    border-radius: 0px 0px 0px 737px;
+    position: absolute;
+    z-index: -1;
+}
+.rect1{
+    position: absolute;
+    z-index: 1;
+    left: 462px;
+    top: 105px;
+}
+.rect2{
+    position: absolute;
+    z-index: 1;
+    left: 824px;
+    top: 464px;
+}
+.rect3{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+.cat{
+    position: absolute;
+    right: 0;
+    top: 40vh;
+    z-index: 2;
+}

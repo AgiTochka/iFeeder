@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  color: white;
+  text-decoration: none;
+  padding-left:150px;
+}
+a:active{
+  color: white;
+  text-decoration: none;
+}
+
