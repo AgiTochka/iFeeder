@@ -20,8 +20,8 @@ export default function Header() {
                     <h1 className={styles.h1}>IFEEDER</h1>
                     <div className={styles.headerMenu}>
                         <a onClick={() => router.push('/')}>
-                            { locale == "ru" && (<p>Настройки сети iFeeder</p>)}
-                            {locale == "en" && <p>Reconnect iFeeder</p> }
+                            { /*locale == "ru" && (<p>Настройки сети iFeeder</p>)*/}
+                            {/*locale == "en" && */<p>Reconnect iFeeder</p> }
                         </a>
                         <a onClick={() => router.push('/')}>
                             <p>About</p>
