@@ -5,9 +5,12 @@ import styles from '@/styles/Home.module.css'
 import React, {useRef, useState} from "react";
 import axios from "./api/axios";
 import Header from "../components/Header";
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 const FEEDER_URL = '/feeder';
-const Iter = ({iterations}) => {
+const Iter = ({iterations, updateData}) => {
+
     const [isActive, setIsActive] = useState(false);
     return (
         <div style={{
@@ -21,37 +24,42 @@ const Iter = ({iterations}) => {
             borderRadius: 50,
             margin: 5,
         }} onClick={() => {
-            setIsActive(!isActive)
+            setIsActive(!isActive);
+            updateData(iterations);
         }}>
             {iterations}
         </div>
     )
 }
-const Itaration = () => {
+
+const Itaration = ({updateIteration}) => {
+
     const day = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     return (<div style={{
             display: "flex"
         }}>
             {day.map((d, index) => {
-                return (<Iter key={index} iterations={d}></Iter>)
+                return (<Iter key={index} iterations={d} updateData={updateIteration}></Iter>)
             })}
         </div>
     )
 }
 
 export default function Home() {
-    const [modalActive, setModalActive] = useState(false);
+    const [iteration, setIteration] = useState(0);
     const [portion, setPortion] = useState('');
+    const [calendarDate, onChange] = useState(new Date());
     const errRef = useRef();
     const [errMsg, setErrMsg] = useState('');
-
-
+    const updateIteration = (value) => {
+        setIteration(value);
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const response = await axios.post(FEEDER_URL,
-                JSON.stringify({portion}),
+                JSON.stringify({portion, iteration, calendarDate}),
                 {
                     headers: {'Content-Type': 'application/json'},
                     withCredentials: true
@@ -97,7 +105,7 @@ export default function Home() {
                         <h3 className={styles.h3}>
                             Number of feeding iterations per day:
                         </h3>
-                        <Itaration/>
+                        <Itaration updateIteration={updateIteration}/>
                         <div className={styles.input}>
                             <input placeholder='Grams' type='text' onChange={(e) => setPortion(e.target.value)}
                                    value={portion} required></input>
@@ -115,6 +123,12 @@ export default function Home() {
                             color: "#FF6C99",
                         }}>Pet Food</h2>
                     </div>
+                </div>
+                <div style={{
+                    margin: "auto",
+                }}>
+                    <Calendar onChange={onChange} returnValue={"range"} value={calendarDate} locale={"en-US"}
+                              allowPartialRange={true} selectRange={true}/>
                 </div>
 
             </div>
