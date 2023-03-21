@@ -1,15 +1,46 @@
+@font-face {
+  font-family: "Plein";
+  src: url("/fonts/Plein Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 a{
   color: white;
   text-decoration: none;
   padding-left:150px;
+  cursor: pointer;
 }
 a:active{
   color: white;
   text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(80.7deg, #FFC73B 0%, #FFBCBC 72.35%, #DDA5FF 102.74%);
 }
 

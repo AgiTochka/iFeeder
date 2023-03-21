@@ -34,3 +34,64 @@
   margin: 15px;
   align-self: center;
 }
+.artBlock{
+  width:100vw;
+  height: 80vh;
+  border-radius: 0px 0px 0px 737px;
+  background: linear-gradient(80.7deg, #DDA5FF 0%, #FFBCBC 53.29%, #FFC73B 102.74% );
+  position: absolute;
+  z-index: -1;
+}
+.rect1{
+  position: absolute;
+  z-index: 1;
+  left: 25%;
+  top: 10vh;
+}
+.rect2{
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  top: 40vh;
+}
+.rect3{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+.cat{
+  position: absolute;
+  right: 0;
+  top: calc(80vh - 400px);
+  z-index: 2;
+}
+.mainText{
+  color: white;
+  font-family: 'Switzer', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120px;
+  z-index: 1;
+  width: 40%;
+  height: 80vh;
+  margin:auto;
+  padding-top: 10vh;
+  margin-bottom: 230px;
+}
+@media screen and  (min-width: 2200px ){
+  .mainText{
+    font-size: 160px;
+  }
+}
+@media screen and (max-width: 1250px){
+  .mainText{
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 900px){
+  .mainText{
+    font-size: 80px;
+  }
+
+}
