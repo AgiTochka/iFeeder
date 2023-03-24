@@ -4,7 +4,7 @@ import Image from "next/image";
 import {useRouter} from "next/router";
 
 
-export default function Header({artBg}) {
+export default function Header() {
     const router = useRouter()
     const { pathname, asPath, query } = router
     const locale = useRouter().locale
@@ -30,7 +30,7 @@ export default function Header({artBg}) {
                             <a onClick={() => router.push({ pathname, query }, asPath, {locale: 'ru'})}>
                             <p>RU</p>
                             </a> :
-                            <a onClick={() => router.push({ pathname, query }, asPath, {locale: defaultLocale})}>
+                            <a onClick={() => router.push({ pathname, query }, asPath, {locale: 'en-US'})}>
                                 <p>EN</p>
                             </a>
                         }

@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Plein";
-  src: url("/fonts/Plein Regular.otf");
+  src: url("/Feeder/fonts/Plein Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Switzer";
-  src: url("/fonts/Switzer-Bold.ttf");
+  src: url("/Feeder/fonts/Switzer-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
