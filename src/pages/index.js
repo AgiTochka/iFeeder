@@ -46,6 +46,9 @@ const Itaration = ({updateIteration}) => {
 }
 
 export default function Home() {
+    const loaderProp = ({src}) =>{
+        return src;
+    }
     const locale = useRouter().locale
     const [iteration, setIteration] = useState(0);
     const [portion, setPortion] = useState('');
@@ -84,10 +87,10 @@ export default function Home() {
             width: "100vw",
         }}>
             <div className={styles.artBlock}>
-                <Image width={345} height={307} className={styles.rect1} src={'/img/Rectangle.png'} alt={''}/>
-                <Image width={435} height={435} className={styles.rect2} src={'/img/Rectangle2.png'} alt={''}/>
-                <Image width={346} height={586} className={styles.rect3} src={'/img/Rectangle3.png'} alt={''}/>
-                <Image width={689} height={852} className={styles.cat} src={'/img/lyingCat.png'} alt={''}/>
+                <Image width={345} height={307} className={styles.rect1} src={'/Feeder/img/Rectangle.png'} alt={''} loader={loaderProp}/>
+                <Image width={435} height={435} className={styles.rect2} src={'/Feeder/img/Rectangle2.png'} alt={''} loader={loaderProp}/>
+                <Image width={346} height={586} className={styles.rect3} src={'/Feeder/img/Rectangle3.png'} alt={''} loader={loaderProp}/>
+                <Image width={689} height={852} className={styles.cat} src={'/Feeder/img/lyingCat.png'} alt={''} loader={loaderProp}/>
             </div>
             <Header></Header>
             { locale ==="ru" &&
@@ -117,7 +120,7 @@ export default function Home() {
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                    <Image width={311} height={317} src={'/img/Circle.png'} alt={''}/>
+                    <Image width={311} height={317} src={'/Feeder/img/Circle.png'} alt={''} loader={loaderProp}/>
                     <div style={{
                         height: "100%",
                         display: "flex",
@@ -135,7 +138,7 @@ export default function Home() {
                         <button className={styles.btn} onClick={handleSubmit}>TEST</button>
                     </div>
                     <div>
-                        <Image width={99} height={101} src={'/img/image3.png'} alt={''}/>
+                        <Image width={99} height={101} src={'/Feeder/img/image3.png'} alt={''} loader={loaderProp}/>
                         <h2 style={{
                             fontFamily: 'Plein',
                             fontStyle: "normal",

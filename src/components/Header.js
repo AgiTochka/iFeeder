@@ -30,7 +30,7 @@ export default function Header({artBg}) {
                             <a onClick={() => router.push({ pathname, query }, asPath, {locale: 'ru'})}>
                             <p>RU</p>
                             </a> :
-                            <a onClick={() => router.push({ pathname, query }, asPath, {locale: 'en-US'})}>
+                            <a onClick={() => router.push({ pathname, query }, asPath, {locale: defaultLocale})}>
                                 <p>EN</p>
                             </a>
                         }

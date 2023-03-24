@@ -66,6 +66,12 @@
   top: calc(80vh - 400px);
   z-index: 2;
 }
+.cat2{
+  position: absolute;
+  left: 3vw;
+  top: calc(60vh - 400px);
+  z-index: 2;
+}
 .mainText{
   color: white;
   font-family: 'Switzer', sans-serif;
