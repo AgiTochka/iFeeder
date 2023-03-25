@@ -49,7 +49,6 @@ export default function Home() {
     const loaderProp = ({src}) =>{
         return src;
     }
-    const locale = useRouter().locale
     const [iteration, setIteration] = useState(0);
     const [portion, setPortion] = useState('');
     const [calendarDate, onChange] = useState(new Date());
@@ -87,26 +86,20 @@ export default function Home() {
             width: "100vw",
         }}>
             <div className={styles.artBlock}>
-                <Image width={345} height={307} className={styles.rect1} src={'/Feeder/img/Rectangle.png'} alt={''} loader={loaderProp}/>
-                <Image width={435} height={435} className={styles.rect2} src={'/Feeder/img/Rectangle2.png'} alt={''} loader={loaderProp}/>
-                <Image width={346} height={586} className={styles.rect3} src={'/Feeder/img/Rectangle3.png'} alt={''} loader={loaderProp}/>
-                <Image width={689} height={852} className={styles.cat} src={'/Feeder/img/lyingCat.png'} alt={''} loader={loaderProp}/>
+                <Image width={345} height={307} className={styles.rect1} src={'/Feeder/img/Rectangle.png'} alt={''}/>
+                <Image width={435} height={435} className={styles.rect2} src={'/Feeder/img/Rectangle2.png'} alt={''}/>
+                <Image width={346} height={586} className={styles.rect3} src={'/Feeder/img/Rectangle3.png'} alt={''}/>
+                <Image width={689} height={852} className={styles.cat} src={'/Feeder/img/lyingCat.png'} alt={''}/>
             </div>
             <Header></Header>
-            { locale ==="ru" &&
-                <h1 className={styles.mainText} style={{
+<h1 className={styles.mainText} style={{
                     width: "50%",
                     paddingTop: "2vh",
                     lineHeight: "130px",
                 }}>
                     Автоматическая кормушка <br/>
                     для твоего питомца
-                </h1>}
-            { locale === ("en-US" ||"default") &&
-                <h1 className={styles.mainText} >
-                    Automatic Feeder <br/>
-                    for your pet
-                </h1>}
+                </h1>
             <div style={{
                 margin: "auto",
                 width: "80vw",
@@ -120,7 +113,7 @@ export default function Home() {
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                    <Image width={311} height={317} src={'/Feeder/img/Circle.png'} alt={''} loader={loaderProp}/>
+                    <Image width={311} height={317} src={'/Feeder/img/Circle.png'} alt={''}/>
                     <div style={{
                         height: "100%",
                         display: "flex",
@@ -138,7 +131,7 @@ export default function Home() {
                         <button className={styles.btn} onClick={handleSubmit}>TEST</button>
                     </div>
                     <div>
-                        <Image width={99} height={101} src={'/Feeder/img/image3.png'} alt={''} loader={loaderProp}/>
+                        <Image width={99} height={101} src={'/Feeder/img/image3.png'} alt={''}/>
                         <h2 style={{
                             fontFamily: 'Plein',
                             fontStyle: "normal",
@@ -152,7 +145,7 @@ export default function Home() {
                 <div style={{
                     margin: "auto",
                 }}>
-                    <Calendar onChange={onChange} returnValue={"range"} value={calendarDate} locale={"en-US"}
+                    <Calendar onChange={onChange} returnValue={"range"} value={calendarDate} locale="ru"
                               allowPartialRange={true} selectRange={true}/>
                 </div>
 

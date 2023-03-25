@@ -2,13 +2,9 @@
 const nextConfig = {
     reactStrictMode: true,
     basePath: '/Feeder',
-    i18n: {
-        locales: ['default','en-US', 'ru'],
-        defaultLocale: 'default',
-        localeDetection: false,
-    },
+};
 
+module.exports = {
+    assetPrefix: "./",
+    images: { unoptimized: true }
 }
-
-module.exports = nextConfig
-
