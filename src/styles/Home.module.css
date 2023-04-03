@@ -23,6 +23,7 @@
   height: 40px;
   margin:10px 0;
   font-weight: bold;
+  padding: 7px;
 }
 .btn{
   width: 35%;
@@ -30,9 +31,14 @@
   background: #A56DC7;
   border: none;
   border-radius: 676.5px 228px 676.5px 676.5px;
-  color: white;
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  color: #EBF1FF;
   margin: 15px;
   align-self: center;
+  cursor: pointer;
 }
 .artBlock{
   width:100vw;
@@ -100,4 +106,14 @@
     font-size: 80px;
   }
 
+}
+
+.p{
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 35px;
+  color: #886E90;
+  width: 100%;
 }

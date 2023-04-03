@@ -18,7 +18,7 @@ export default function Header() {
                         <a onClick={() => router.push('/hello')}>
                             <p>Настройки сети iFeeder</p>
                         </a>
-                        <a onClick={() => router.push('/')}>
+                        <a href={'#about'}>
 
                             <p>О проекте</p>
                         </a>
