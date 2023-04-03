@@ -10,7 +10,7 @@ import 'react-calendar/dist/Calendar.css';
 import {useRouter} from "next/router";
 import Footer from "@/components/Footer";
 
-const FEEDER_URL = '/feeder';
+const FEEDER_URL = '/Feeder/index.php';
 const Iter = ({iterations, updateData}) => {
     const [isActive, setIsActive] = useState(false);
     return (

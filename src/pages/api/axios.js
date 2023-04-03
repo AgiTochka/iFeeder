@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'http://http://109.229.70.66:220',
+    baseURL: 'https://psbit.ru',
     headers: {
         "Content-Type": "application/json",
         'Access-Control-Allow-Origin': '*',
