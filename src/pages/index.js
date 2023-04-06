@@ -7,7 +7,7 @@ import Calendar from 'react-calendar';
 import Footer from "@/components/Footer";
 import styles2 from "@/styles/Hello.module.css";
 const FEEDER_URL = '/Feeder/index.php';
-const FEEDER_URL2 = '/feeder';
+const FEEDER_URL2 = '/Feeder/index.php';
 const Iter = ({iterations, updateData}) => {
     const [isActive, setIsActive] = useState(false);
     return (
