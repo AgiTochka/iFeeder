@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import styles2 from "@/styles/Hello.module.css";
 import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
 const FEEDER_URL = '/Feeder/index.php';
-const FEEDER_URL2 = '/feeder';
+const FEEDER_URL2 = '/Feeder/index.php';
 const Iter = ({iterations, updateData}) => {
     const [isActive, setIsActive] = useState(false);
     return (
