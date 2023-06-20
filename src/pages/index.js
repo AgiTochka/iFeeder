@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Calendar from 'react-calendar';
 import Footer from "@/components/Footer";
 import styles2 from "@/styles/Hello.module.css";
+import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
 const FEEDER_URL = '/Feeder/index.php';
 const FEEDER_URL2 = '/feeder';
 const Iter = ({iterations, updateData}) => {
@@ -63,6 +64,11 @@ export default function Home() {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log( JSON.stringify({portion, iteration}),
+            {
+                headers: {'Content-Type': 'application/json',},
+                withCredentials: true
+            });
         try {
             const timeZone =
                 Intl?.DateTimeFormat()?.resolvedOptions()?.timeZone ??
@@ -89,6 +95,11 @@ export default function Home() {
     }
     const handleSubmit2 = async (e) => {
         e.preventDefault();
+        console.log(JSON.stringify({portion2, iteration2, calendarDate}),
+            {
+                headers: {'Content-Type': 'application/json'},
+                withCredentials: true
+            })
         try {
             const timeZone =
                 Intl?.DateTimeFormat()?.resolvedOptions()?.timeZone ??
@@ -118,10 +129,10 @@ export default function Home() {
             width: "100vw",
         }}>
             <div className={styles.artBlock}>
-                <Image width={345} height={307} className={styles.rect1} src={'/Feeder/img/Rectangle.png'} alt={''}/>
-                <Image width={435} height={435} className={styles.rect2} src={'/Feeder/img/Rectangle2.png'} alt={''}/>
-                <Image width={346} height={586} className={styles.rect3} src={'/Feeder/img/Rectangle3.png'} alt={''}/>
-                <Image width={689} height={852} className={styles.cat} src={'/Feeder/img/lyingCat.png'} alt={''}/>
+                <Image width={345} height={307} className={styles.rect1} src={'./img/Rectangle.png'} alt={''}/>
+                <Image width={435} height={435} className={styles.rect2} src={'./img/Rectangle2.png'} alt={''}/>
+                <Image width={346} height={586} className={styles.rect3} src={'./img/Rectangle3.png'} alt={''}/>
+                <Image width={689} height={852} className={styles.cat} src={'./img/lyingCat.png'} alt={''}/>
             </div>
             <Header></Header>
 <h1 className={styles.mainText} style={{
@@ -145,7 +156,7 @@ export default function Home() {
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                    <Image width={311} height={317} src={'/Feeder/img/Circle.png'} alt={''}/>
+                    <Image width={311} height={317} src={'./img/Circle.png'} alt={''}/>
                     <div style={{
                         height: "100%",
                         display: "flex",
@@ -169,7 +180,7 @@ export default function Home() {
                         flexWrap: "wrap",
                         justifyContent: "space-around",
                     }}>
-                        <Image width={99} height={101} src={'/Feeder/img/image3.png'} alt={''}/>
+                        <Image width={99} height={101} src={'./img/image3.png'} alt={''}/>
                         <h2 style={{
                             fontFamily: 'Plein',
                             fontStyle: "normal",

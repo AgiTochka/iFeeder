@@ -16,9 +16,9 @@ export default function Hello() {
             <div className={styles.artBlock} style={{
                 background: "linear-gradient(180deg, #A56DC7 -44.29%, #FF6C99 16.66%, #FFC73B 66.42%, #A56DC7 126.3%)",
             }}>
-                <Image width={345} height={307} className={styles.rect1} src={'/Feeder/img/Rectangle.png'} alt={''}/>
-                <Image width={435} height={435} className={styles.rect2} src={'/Feeder/img/Rectangle2.png'} alt={''}/>
-                <Image width={689} height={852} className={styles.cat} src={'/Feeder/img/catInBox.png'} alt={''}/>
+                <Image width={345} height={307} className={styles.rect1} src={'./img/Rectangle.png'} alt={''}/>
+                <Image width={435} height={435} className={styles.rect2} src={'./img/Rectangle2.png'} alt={''}/>
+                <Image width={689} height={852} className={styles.cat} src={'./img/catInBox.png'} alt={''}/>
             </div>
             <Header></Header>
             <h1 className={styles.mainText} style={{

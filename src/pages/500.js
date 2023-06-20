@@ -14,10 +14,10 @@ export default function FiveOhOh() {
         <div className={styles.artBlock} style={{
             background: "linear-gradient(180deg, #A56DC7 -44.29%, #FF6C99 16.66%, #FFC73B 66.42%, #A56DC7 126.3%)",
         }}>
-            <Image width={345} height={307} className={styles.rect1} src={'/Feeder/img/Rectangle.png'} alt={''}/>
-            <Image width={435} height={435} className={styles.rect2} src={'/Feeder/img/Rectangle2.png'} alt={''}/>
-            <Image width={346} height={586} className={styles.rect3} src={'/Feeder/img/Rectangle3.png'} alt={''}/>
-            <Image width={1088} height={912} className={styles.cat2} src={'/Feeder/img/catOnBooks.png'} alt={''}/>
+            <Image width={345} height={307} className={styles.rect1} src={'./img/Rectangle.png'} alt={''}/>
+            <Image width={435} height={435} className={styles.rect2} src={'./img/Rectangle2.png'} alt={''}/>
+            <Image width={346} height={586} className={styles.rect3} src={'./img/Rectangle3.png'} alt={''}/>
+            <Image width={1088} height={912} className={styles.cat2} src={'./img/catOnBooks.png'} alt={''}/>
         </div>
         <Header></Header>
             <h1 className={styles.mainText} style={{
